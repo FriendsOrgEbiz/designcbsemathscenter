@@ -13,8 +13,9 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Logo white />
               <div>
-                <h3 className="text-lg font-heading font-bold">DEISGN</h3>
+                <h3 className="text-lg font-heading font-bold">DESIGN</h3>
                 <p className="text-sm font-medium -mt-1 text-primary-200">CBSE Maths & Science Centre</p>
+                <p className="text-xs sm:text-sm font-bold -mt1 text-white-600">(Only For CBSE Syllabus)</p>
               </div>
             </div>
             <p className="text-sm text-gray-300 mb-6">
@@ -32,7 +33,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-6">Quick Links</h3>
@@ -69,7 +70,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 3: Courses */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-6">Our Courses</h3>
@@ -101,7 +102,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Column 4: Contact */}
           <div>
             <h3 className="text-lg font-heading font-semibold mb-6">Contact Us</h3>
@@ -109,7 +110,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="text-primary-300 mt-0.5 mr-3 flex-shrink-0" />
                 <span className="text-sm text-gray-300">
-                  24, Karthik Nagar, (Near Kendriya Vidyalaya), Sowripalayam Main Road, Coimbatore-641028
+                  24, Karthik Nagar, (Near Kendriya Vidyalaya & Swathi Poly Clinic), Sowripalayam Main Road, Coimbatore-641028
                 </span>
               </li>
               <li className="flex items-center">
@@ -120,8 +121,8 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="text-primary-300 mr-3 flex-shrink-0" />
-                <a href="mailto:info@designcbsecentre.com" className="text-sm text-gray-300 hover:text-white transition-colors">
-                  info@designcbsecentre.com
+                <a href="mailto:jagadeesanal@gmail.com" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  jagadeesanal@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -134,11 +135,11 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Section with Copyright */}
         <div className="pt-8 border-t border-primary-800">
           <p className="text-sm text-center text-gray-400">
-            &copy; {new Date().getFullYear()} DEISGN CBSE Maths & Science Centre. All rights reserved.
+            &copy; {new Date().getFullYear()} DESIGN CBSE Maths & Science Centre. All rights reserved.
           </p>
         </div>
       </div>

@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/common/SectionTitle';
 import Button from '../components/common/Button';
-import { 
-  Phone, Mail, MapPin, Clock, Send, 
-  MessageCircle, BookOpen, Calendar 
+import {
+  Phone, Mail, MapPin, Clock, Send,
+  MessageCircle, BookOpen, Calendar
 } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
@@ -19,12 +19,12 @@ interface ContactFormData {
 }
 
 const ContactPage: React.FC = () => {
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors } 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
   } = useForm<ContactFormData>();
-  
+
   const onSubmit = (data: ContactFormData) => {
     console.log(data);
     // Handle form submission
@@ -46,15 +46,15 @@ const ContactPage: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Contact Information */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <SectionTitle 
-          title="Get In Touch" 
+        <SectionTitle
+          title="Get In Touch"
           subtitle="We're here to answer any questions you may have"
           center
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -68,14 +68,14 @@ const ContactPage: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Call Us</h3>
             <p className="text-gray-600 mb-4">Feel free to call us for any inquiries</p>
-            <a 
-              href="tel:9585441301" 
+            <a
+              href="tel:9585441301"
               className="text-lg font-medium text-primary-600 hover:text-primary-700 transition-colors"
             >
               +91 9585441301
             </a>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -88,14 +88,14 @@ const ContactPage: React.FC = () => {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Email Us</h3>
             <p className="text-gray-600 mb-4">We'll respond to your email promptly</p>
-            <a 
-              href="mailto:info@designcbsecentre.com" 
+            <a
+              href="mailto:jagadeesanal@gmail.com"
               className="text-lg font-medium text-primary-600 hover:text-primary-700 transition-colors"
             >
-              info@designcbsecentre.com
+              jagadeesanal@gmail.com
             </a>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,12 +116,12 @@ const ContactPage: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Contact Form and Map */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <motion.div 
+            <motion.div
               className="p-8"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -132,7 +132,7 @@ const ContactPage: React.FC = () => {
                 <MessageCircle size={24} className="text-primary-600 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-900">Send a Message</h3>
               </div>
-              
+
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -141,9 +141,8 @@ const ContactPage: React.FC = () => {
                   <input
                     type="text"
                     id="name"
-                    className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${
-                      errors.name ? 'border-red-500' : 'border-gray-300'
-                    }`}
+                    className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.name ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     placeholder="John Doe"
                     {...register('name', { required: 'Name is required' })}
                   />
@@ -151,7 +150,7 @@ const ContactPage: React.FC = () => {
                     <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
                   )}
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
@@ -160,11 +159,10 @@ const ContactPage: React.FC = () => {
                     <input
                       type="email"
                       id="email"
-                      className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${
-                        errors.email ? 'border-red-500' : 'border-gray-300'
-                      }`}
+                      className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.email ? 'border-red-500' : 'border-gray-300'
+                        }`}
                       placeholder="john@example.com"
-                      {...register('email', { 
+                      {...register('email', {
                         required: 'Email is required',
                         pattern: {
                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -176,7 +174,7 @@ const ContactPage: React.FC = () => {
                       <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
                     )}
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                       Phone Number <span className="text-red-500">*</span>
@@ -184,11 +182,10 @@ const ContactPage: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${
-                        errors.phone ? 'border-red-500' : 'border-gray-300'
-                      }`}
+                      className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                        }`}
                       placeholder="+91 98765 43210"
-                      {...register('phone', { 
+                      {...register('phone', {
                         required: 'Phone number is required',
                         pattern: {
                           value: /^[0-9+\- ]{10,15}$/,
@@ -201,7 +198,7 @@ const ContactPage: React.FC = () => {
                     )}
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="studentClass" className="block text-sm font-medium text-gray-700 mb-1">
@@ -220,7 +217,7 @@ const ContactPage: React.FC = () => {
                       <option value="Class 12">Class 12</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                       Subject of Interest
@@ -238,7 +235,7 @@ const ContactPage: React.FC = () => {
                     </select>
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Your Message <span className="text-red-500">*</span>
@@ -246,9 +243,8 @@ const ContactPage: React.FC = () => {
                   <textarea
                     id="message"
                     rows={4}
-                    className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${
-                      errors.message ? 'border-red-500' : 'border-gray-300'
-                    }`}
+                    className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.message ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     placeholder="How can we help you?"
                     {...register('message', { required: 'Message is required' })}
                   ></textarea>
@@ -256,7 +252,7 @@ const ContactPage: React.FC = () => {
                     <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
                   )}
                 </div>
-                
+
                 <div className="flex items-start">
                   <input
                     type="checkbox"
@@ -268,7 +264,7 @@ const ContactPage: React.FC = () => {
                     I would like to book a trial class
                   </label>
                 </div>
-                
+
                 <div>
                   <Button type="submit" variant="primary" className="w-full">
                     <Send size={16} className="mr-2" /> Send Message
@@ -276,7 +272,7 @@ const ContactPage: React.FC = () => {
                 </div>
               </form>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -285,22 +281,22 @@ const ContactPage: React.FC = () => {
               className="bg-gray-50"
             >
               <div className="h-80 lg:h-full">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4517820060585!2d76.99013787380644!3d11.008384954833937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af3faa805f%3A0xb8b3c25e8b0a5eb5!2sSowripalayam%20Main%20Rd%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1717191464000!5m2!1sen!2sin" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4517820060585!2d76.99013787380644!3d11.008384954833937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af3faa805f%3A0xb8b3c25e8b0a5eb5!2sSowripalayam%20Main%20Rd%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1717191464000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="DEISGN CBSE Centre location"
+                  title="DESIGN CBSE Centre location"
                 ></iframe>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
-      
+
       {/* Book Trial Class CTA */}
       <div className="bg-primary-800 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -313,7 +309,7 @@ const ContactPage: React.FC = () => {
                 Experience our teaching methodology firsthand. Try a class with no obligations and see the difference in our approach.
               </p>
             </div>
-            
+
             <div className="lg:col-span-2 flex flex-col sm:flex-row gap-4">
               <Button to="/contact" variant="accent" size="lg" className="flex-1">
                 <BookOpen size={18} className="mr-2" /> Book Trial Class

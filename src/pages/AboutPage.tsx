@@ -43,7 +43,7 @@ const AboutPage: React.FC = () => {
               About Us
             </h1>
             <p className="text-primary-100 mt-2">
-              Learn more about DEISGN CBSE Maths & Science Centre
+              Learn more about DESIGN CBSE Maths & Science Centre
             </p>
           </motion.div>
         </div>
@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
               subtitle="Premier coaching institute specializing in CBSE mathematics and science education"
             />
             <p className="text-gray-600 mb-6">
-              DEISGN CBSE Maths & Science Centre was established with a vision
+              DESIGN CBSE Maths & Science Centre was established with a vision
               to provide quality education to students following the CBSE
               curriculum. Located in Coimbatore, we specialize in teaching
               Mathematics and Science subjects to students from classes 8 to 12.
@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
               well in their board examinations.
             </p>
             <p className="text-gray-600">
-              At DEISGN, we focus exclusively on the CBSE syllabus, ensuring
+              At DESIGN, we focus exclusively on the CBSE syllabus, ensuring
               that our teaching methods and study materials are perfectly
               aligned with the board's requirements and examination patterns.
             </p>
@@ -91,7 +91,7 @@ const AboutPage: React.FC = () => {
           >
             <div className="absolute -top-6 -right-6 w-48 h-48 bg-primary-200 rounded-full opacity-50 filter blur-3xl"></div>
             <img
-              src="https://images.pexels.com/photos/8617943/pexels-photo-8617943.jpeg"
+              src="https://img.freepik.com/premium-photo/vibrant-side-view-portrait-male-teacher-helping-student-using-computer-college-classroom-copy_236854-39188.jpg"
               alt="Our institute"
               className="rounded-lg shadow-xl"
             />
@@ -191,10 +191,10 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    DEISGN CBSE Maths & Science Centre
+                    DESIGN CBSE Maths & Science Centre
                   </h3>
                   <p className="text-gray-600">
-                    24, Karthik Nagar, (Near Kendriya Vidyalaya),
+                    24, Karthik Nagar, (Near Kendriya Vidyalaya & Swathi Poly Clinic),
                     <br />
                     Sowripalayam Main Road, Coimbatore-641028
                   </p>
@@ -232,7 +232,7 @@ const AboutPage: React.FC = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="DEISGN CBSE Maths & Science Centre location"
+                  title="DESIGN CBSE Maths & Science Centre location"
                 ></iframe>
               </div>
             </div>

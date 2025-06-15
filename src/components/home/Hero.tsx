@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../common/Button';
 import { Sparkles, BookOpen, Clock } from 'lucide-react';
+import logo from '../images/logo.jpeg'
 
 const Hero: React.FC = () => {
   return (
@@ -25,6 +26,13 @@ const Hero: React.FC = () => {
               <Sparkles size={14} className="mr-1" />
               Premier CBSE Coaching Institute in Coimbatore
             </span>
+            <div className="flex justify-center mb-4">
+              <img
+                src={logo}
+                alt="Design CBSE Logo"
+                className="h-45 w-80"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6">
               Excellence in CBSE <br />Maths & Science Education
             </h1>
@@ -39,7 +47,7 @@ const Hero: React.FC = () => {
                 View Timetable
               </Button>
             </div>
-            
+
             {/* Key Features */}
             <div className="grid grid-cols-2 gap-6 mt-12">
               <div className="flex items-start space-x-3">
@@ -62,7 +70,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Right Side: Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -72,9 +80,9 @@ const Hero: React.FC = () => {
           >
             <div className="relative">
               <div className="absolute -top-8 -left-8 w-64 h-64 bg-accent-400 rounded-full opacity-20 filter blur-3xl"></div>
-              <img 
-                src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg" 
-                alt="Students in classroom" 
+              <img
+                src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg"
+                alt="Students in classroom"
                 className="rounded-lg shadow-2xl w-full object-cover"
                 style={{ maxHeight: '500px' }}
               />

@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from '../common/SectionTitle';
-import { 
-  Users, Award, BookOpen, Calculator, 
-  Clock, BadgeCheck, Target, Sparkles 
+import {
+  Users, Award, BookOpen, Calculator,
+  Clock, BadgeCheck, Target, Sparkles
 } from 'lucide-react';
 
 interface FeatureCardProps {
@@ -15,7 +15,7 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, delay }) => {
   return (
-    <motion.div 
+    <motion.div
       className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -78,15 +78,15 @@ const Features: React.FC = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle 
-          title="Why Choose Us" 
+        <SectionTitle
+          title="Why Choose Us"
           subtitle="We provide comprehensive support to help students excel in CBSE mathematics and science subjects"
           center
         />
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <FeatureCard 
+            <FeatureCard
               key={index}
               icon={feature.icon}
               title={feature.title}

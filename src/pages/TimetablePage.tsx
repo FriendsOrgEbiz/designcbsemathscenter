@@ -20,7 +20,7 @@ interface ScheduleItem {
 const TimetablePage: React.FC = () => {
   const [selectedSubject, setSelectedSubject] = useState<Subject>('all');
   const [selectedGrade, setSelectedGrade] = useState<Grade>('all');
-  
+
   const scheduleItems: ScheduleItem[] = [
     {
       subject: 'math',
@@ -42,7 +42,7 @@ const TimetablePage: React.FC = () => {
       subject: 'math',
       grade: '10',
       days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      time: '6:00 AM - 7:00 AM & 6:00 PM - 7:00 PM',
+      time: '6:00 AM - 7:00 AM & 6:00 PM - 7:00 PM\nStudents can select the most suitable batch based on their convenience.',
       icon: <Calculator size={20} />,
       iconColor: 'bg-primary-600'
     },
@@ -111,7 +111,7 @@ const TimetablePage: React.FC = () => {
       iconColor: 'bg-gray-700'
     }
   ];
-  
+
   const filteredSchedule = scheduleItems.filter(item => {
     if (selectedSubject !== 'all' && item.subject !== selectedSubject) return false;
     if (selectedGrade !== 'all' && item.grade !== selectedGrade) return false;
@@ -133,15 +133,15 @@ const TimetablePage: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Timetable Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle 
-          title="Class Schedule" 
+        <SectionTitle
+          title="Class Schedule"
           subtitle="Find the perfect time slot for your educational journey"
           center
         />
-        
+
         {/* Filter Controls */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-6">
@@ -164,7 +164,7 @@ const TimetablePage: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex-1">
               <label className="block text-sm font-medium text-gray-700 mb-2">Filter by Class</label>
               <div className="relative">
@@ -185,9 +185,9 @@ const TimetablePage: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="flex items-end">
-              <Button 
+              <Button
                 onClick={() => {
                   setSelectedSubject('all');
                   setSelectedGrade('all');
@@ -200,7 +200,7 @@ const TimetablePage: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Schedule Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {filteredSchedule.map((item, index) => (
@@ -220,9 +220,9 @@ const TimetablePage: React.FC = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900">
-                          {item.subject === 'math' ? 'Mathematics' : 
-                          item.subject === 'science' ? 'Science' : 
-                          item.subject === 'physics' ? 'Physics' : 'Chemistry'}
+                          {item.subject === 'math' ? 'Mathematics' :
+                            item.subject === 'science' ? 'Science' :
+                              item.subject === 'physics' ? 'Physics' : 'Chemistry'}
                         </h3>
                         <p className="text-sm text-gray-500">Class {item.grade}</p>
                       </div>
@@ -231,7 +231,7 @@ const TimetablePage: React.FC = () => {
                       Class {item.grade}
                     </span>
                   </div>
-                  
+
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <Calendar size={16} className="text-gray-400 mt-0.5 mr-2 flex-shrink-0" />
@@ -239,21 +239,41 @@ const TimetablePage: React.FC = () => {
                         {item.days.join(', ')}
                       </span>
                     </div>
-                    <div className="flex items-start">
+                    {/* <div className="flex items-start">
                       <Clock size={16} className="text-gray-400 mt-0.5 mr-2 flex-shrink-0" />
                       <span className="text-gray-700">{item.time}</span>
+                    </div> */}
+                    {/* <div className="text-gray-700 space-y-1">
+                      {item.time.split('\n').map((line, idx) => (
+                        <div key={idx}>{line}</div>
+                      ))}
+                    </div> */}
+                    <div className="space-y-1">
+                      {item.time.split('\n').map((line, idx) => (
+                        <div
+                          key={idx}
+                          className={
+                            line.toLowerCase().includes('students can select the most suitable batch based on their convenience')
+                              ? 'text-red-600 font-bold'
+                              : 'text-gray-700'
+                          }
+                        >
+                          {line}
+                        </div>
+                      ))}
                     </div>
+
                   </div>
                 </div>
               </Card>
             </motion.div>
           ))}
         </div>
-        
+
         {filteredSchedule.length === 0 && (
           <div className="text-center py-12 bg-gray-50 rounded-lg">
             <p className="text-lg text-gray-600">No schedules match your current filters.</p>
-            <Button 
+            <Button
               onClick={() => {
                 setSelectedSubject('all');
                 setSelectedGrade('all');
@@ -266,21 +286,21 @@ const TimetablePage: React.FC = () => {
           </div>
         )}
       </div>
-      
+
       {/* Test Batches Section */}
       <div className="bg-gray-50 py-20 mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle 
-            title="Test Batches" 
+          <SectionTitle
+            title="Test Batches"
             subtitle="Regular assessment sessions to evaluate progress"
             center
           />
-          
+
           <div className="max-w-4xl mx-auto mt-12">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Test Schedules by Class</h3>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start pb-6 border-b border-gray-100">
                     <div className="bg-primary-50 p-2 rounded-lg mr-4">
@@ -294,10 +314,10 @@ const TimetablePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start pb-6 border-b border-gray-100">
-                    <div className="bg-primary-50 p-2 rounded-lg mr-4">
-                      <span className="text-primary-700 font-semibold">8-9</span>
+                    <div className="bg-primary-50 p-2 rounded-lg mr-4 w-14">
+                      <span className="text-primary-700 font-semibold">8 - 9</span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 mb-1">Class 8 & 9 Test Batches</h4>
@@ -307,10 +327,10 @@ const TimetablePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="bg-primary-50 p-2 rounded-lg mr-4">
-                      <span className="text-primary-700 font-semibold">11-12</span>
+
+                  <div className="flex items-start pb-6 border-b border-gray-100">
+                    <div className="bg-primary-50 p-2 rounded-lg mr-4 w-30 whitespace-nowrap">
+                      <span className="text-primary-700 font-semibold">11 - 12</span>
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 mb-1">Class 11 & 12 Test Batches</h4>
@@ -320,10 +340,24 @@ const TimetablePage: React.FC = () => {
                       </p>
                     </div>
                   </div>
+
+                  {/* <div className="flex items-start">
+                    <div className="bg-primary-50 p-2 rounded-lg mr-4 w-15">
+                      <span className="text-primary-700 font-semibold">11-12</span>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-gray-900 mb-1">Class 11 & 12 Test Batches</h4>
+                      <p className="text-gray-600 mb-2">Every Saturday, 4:00 PM - 7:00 PM (any one hour)</p>
+                      <p className="text-sm text-gray-500">
+                        Higher secondary students can select a convenient one-hour slot for weekly assessment. Tests are designed to match board exam patterns.
+                      </p>
+                    </div>
+                  </div> */}
+
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8 text-center">
               <p className="text-gray-600 mb-6">
                 Want to experience our teaching methodology before enrolling? Book a trial class now.

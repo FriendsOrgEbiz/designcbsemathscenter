@@ -1,0 +1,162 @@
+[
+    {
+      "year": "2024-2025",
+      "class": 10,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student A", "school": "VNPS", "marks": 100 },
+        { "name": "Student B", "school": "SPIPS", "marks": 98 }
+      ],
+      "other_scorers": {
+        "91-99": "12 students",
+        "81-90": "18 students"
+      },
+      "summary": "Consistently high performance this year"
+    },
+    {
+      "year": "2023-2024",
+      "class": 12,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student C", "school": "AFS", "marks": 96 },
+        { "name": "Student D", "school": "BVM", "marks": 94 }
+      ],
+      "other_scorers": {
+        "91-95": "19 students",
+        "85-90": "15 students"
+      },
+      "summary": "Excellent results in board exams"
+    },
+    {
+      "year": "2022-2023",
+      "class": 10,
+      "subject": "Science",
+      "exam": "Term-1",
+      "top_scorers": [
+        { "name": "Student E", "school": "PSGPS", "marks": 40 },
+        { "name": "Student F", "school": "KVS", "marks": 39 }
+      ],
+      "other_scorers": {
+        "35-39": "14 students"
+      },
+      "summary": "Strong performance in Term-1"
+    },
+    {
+      "year": "2021-2022",
+      "class": 10,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student G", "school": "VNPS", "marks": 99 },
+        { "name": "Student H", "school": "SSVM", "marks": 97 }
+      ],
+      "other_scorers": {
+        "91-98": "10 students",
+        "85-90": "17 students"
+      },
+      "summary": "Great batch this year"
+    },
+    {
+      "year": "2020-2021",
+      "class": 12,
+      "subject": "Science",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student I", "school": "BVM", "marks": 95 },
+        { "name": "Student J", "school": "GRD", "marks": 94 }
+      ],
+      "other_scorers": {
+        "90-94": "11 students"
+      },
+      "summary": "Overall good results"
+    },
+    {
+      "year": "2019-2020",
+      "class": 10,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student K", "school": "VNPS", "marks": 100 },
+        { "name": "Student L", "school": "AFS", "marks": 98 }
+      ],
+      "other_scorers": {
+        "90-99": "20 students"
+      },
+      "summary": "Exceptional year"
+    },
+    {
+      "year": "2018-2019",
+      "class": 10,
+      "subject": "Science",
+      "exam": "Term-2",
+      "top_scorers": [
+        { "name": "Student M", "school": "KVS", "marks": 40 },
+        { "name": "Student N", "school": "VNPS", "marks": 39 }
+      ],
+      "other_scorers": {
+        "35-39": "9 students"
+      },
+      "summary": "Good term-wise improvement"
+    },
+    {
+      "year": "2017-2018",
+      "class": 12,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student O", "school": "PSGPS", "marks": 97 },
+        { "name": "Student P", "school": "SSVM", "marks": 95 }
+      ],
+      "other_scorers": {
+        "90-94": "13 students"
+      },
+      "summary": "Stable academic outcome"
+    },
+    {
+      "year": "2016-2017",
+      "class": 10,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student Q", "school": "SPIPS", "marks": 99 },
+        { "name": "Student R", "school": "BVM", "marks": 97 }
+      ],
+      "other_scorers": {
+        "91-98": "14 students",
+        "85-90": "18 students"
+      },
+      "summary": "Performance improving year-on-year"
+    },
+    {
+      "year": "2015-2016",
+      "class": 10,
+      "subject": "Science",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student S", "school": "VNPS", "marks": 98 },
+        { "name": "Student T", "school": "GRD", "marks": 97 }
+      ],
+      "other_scorers": {
+        "91-97": "16 students",
+        "81-90": "20 students"
+      },
+      "summary": "Another great year"
+    },
+    {
+      "year": "2014-2015",
+      "class": 10,
+      "subject": "Maths",
+      "exam": "Board",
+      "top_scorers": [
+        { "name": "Student U", "school": "VNPS", "marks": 100 },
+        { "name": "Student V", "school": "AFS", "marks": 99 }
+      ],
+      "other_scorers": {
+        "91-99": "19 students"
+      },
+      "summary": "First batch success"
+    }
+  ]
+  

@@ -8,14 +8,14 @@ interface SectionTitleProps {
   light?: boolean;
 }
 
-const SectionTitle: React.FC<SectionTitleProps> = ({ 
-  title, 
-  subtitle, 
+const SectionTitle: React.FC<SectionTitleProps> = ({
+  title,
+  subtitle,
   center = false,
-  light = false 
+  light = false
 }) => {
   return (
-    <motion.div 
+    <motion.div
       className={`mb-12 ${center ? 'text-center' : ''}`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

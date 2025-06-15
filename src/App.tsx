@@ -10,6 +10,7 @@ import MethodologyPage from "./pages/MethodologyPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToHash from "./components/utils/ScrollToHash";
+import ResultsPage from "./pages/Reults";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/methodology" element={<MethodologyPage />} />
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/results" element={<ResultsPage />} />
         </Routes>
       </Layout>
     </Router>

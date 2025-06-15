@@ -9,7 +9,7 @@ const CTASection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side: Image */}
-          <motion.div 
+          <motion.div
             className="relative hidden lg:block"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -17,13 +17,13 @@ const CTASection: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="absolute -top-6 -left-6 w-48 h-48 bg-accent-400 rounded-full opacity-20 filter blur-3xl"></div>
-            <img 
-              src="https://images.pexels.com/photos/6283979/pexels-photo-6283979.jpeg" 
-              alt="Student studying" 
+            <img
+              src="https://muskantutor.com/wp-content/uploads/2023/10/Screenshot_54.png"
+              alt="Student studying"
               className="rounded-lg shadow-xl"
             />
           </motion.div>
-          
+
           {/* Right side: Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -37,7 +37,7 @@ const CTASection: React.FC = () => {
             <p className="text-lg text-primary-100 mb-8">
               Experience our teaching methodology firsthand. Book a free trial class today and see how we can help your child excel in mathematics and science.
             </p>
-            
+
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <CheckCircle size={20} className="text-accent-400 mt-1 mr-3 flex-shrink-0" />
@@ -56,7 +56,7 @@ const CTASection: React.FC = () => {
                 <p className="text-primary-100">Choose between online and in-person sessions</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Button to="/contact" size="lg" variant="accent" withArrow>
                 Book a Trial Class

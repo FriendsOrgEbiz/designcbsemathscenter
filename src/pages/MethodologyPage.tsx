@@ -19,7 +19,7 @@ const MethodologyPage: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Filling Method Section */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -29,8 +29,8 @@ const MethodologyPage: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <SectionTitle 
-              title="The Filling Method" 
+            <SectionTitle
+              title="The Filling Method"
               subtitle="Our innovative approach to teaching mathematics"
             />
             <p className="text-gray-600 mb-6">
@@ -61,7 +61,7 @@ const MethodologyPage: React.FC = () => {
               </div>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +76,7 @@ const MethodologyPage: React.FC = () => {
                   The Filling Method Process
                 </h3>
               </div>
-              
+
               {/* Step 1 */}
               <div className="relative pl-8 pb-8 border-l-2 border-primary-200">
                 <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-primary-500"></div>
@@ -85,7 +85,7 @@ const MethodologyPage: React.FC = () => {
                   Students are taught to visualize mathematical concepts through diagrams, charts, and models, creating a mental framework.
                 </p>
               </div>
-              
+
               {/* Step 2 */}
               <div className="relative pl-8 pb-8 border-l-2 border-primary-200">
                 <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-primary-500"></div>
@@ -94,7 +94,7 @@ const MethodologyPage: React.FC = () => {
                   Students learn to identify recurring patterns and relationships in mathematical problems.
                 </p>
               </div>
-              
+
               {/* Step 3 */}
               <div className="relative pl-8 pb-8 border-l-2 border-primary-200">
                 <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-primary-500"></div>
@@ -103,7 +103,7 @@ const MethodologyPage: React.FC = () => {
                   Using structured templates, students "fill in" the required components to solve problems systematically.
                 </p>
               </div>
-              
+
               {/* Step 4 */}
               <div className="relative pl-8">
                 <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-primary-500"></div>
@@ -116,16 +116,16 @@ const MethodologyPage: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       {/* Comprehensive Study Material */}
       <div className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle 
-            title="Comprehensive Study Material" 
+          <SectionTitle
+            title="Comprehensive Study Material"
             subtitle="Meticulously curated content from over 10 reference books"
             center
           />
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -139,7 +139,7 @@ const MethodologyPage: React.FC = () => {
                   <BookOpen size={24} className="text-primary-600 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Our Study Material Features</h3>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="bg-primary-50 rounded-full p-2 mt-1 mr-4 flex-shrink-0">
@@ -152,7 +152,7 @@ const MethodologyPage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="bg-primary-50 rounded-full p-2 mt-1 mr-4 flex-shrink-0">
                       <FileText size={16} className="text-primary-600" />
@@ -164,7 +164,7 @@ const MethodologyPage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="bg-primary-50 rounded-full p-2 mt-1 mr-4 flex-shrink-0">
                       <FileText size={16} className="text-primary-600" />
@@ -176,7 +176,7 @@ const MethodologyPage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="bg-primary-50 rounded-full p-2 mt-1 mr-4 flex-shrink-0">
                       <FileText size={16} className="text-primary-600" />
@@ -191,7 +191,7 @@ const MethodologyPage: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -199,24 +199,24 @@ const MethodologyPage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="order-1 lg:order-2"
             >
-              <img 
-                src="https://images.pexels.com/photos/5088188/pexels-photo-5088188.jpeg" 
-                alt="Study materials" 
+              <img
+                src="https://img.freepik.com/premium-photo/children-reading-from-books-together_13339-268320.jpg"
+                alt="Study materials"
                 className="rounded-lg shadow-xl"
               />
             </motion.div>
           </div>
         </div>
       </div>
-      
+
       {/* Teaching Philosophy */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <SectionTitle 
-          title="Our Teaching Philosophy" 
+        <SectionTitle
+          title="Our Teaching Philosophy"
           subtitle="Core principles that guide our educational approach"
           center
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -235,7 +235,7 @@ const MethodologyPage: React.FC = () => {
               We prioritize deep conceptual understanding over mere memorization. Students are encouraged to ask "why" and "how" questions to develop critical thinking skills.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -253,7 +253,7 @@ const MethodologyPage: React.FC = () => {
               We recognize that each student has unique learning needs and pace. Our approach allows for personalized attention to address individual challenges and build on strengths.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

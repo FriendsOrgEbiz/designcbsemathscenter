@@ -22,6 +22,7 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'Contact', path: '/contact' },
     { name: 'Results', path: '/results' },
+    { name: 'Gallery', path: '/gallery' },
   ];
 
   const toggleMenu = () => {

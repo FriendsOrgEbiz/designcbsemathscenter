@@ -128,8 +128,10 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <Clock size={18} className="text-primary-300 mt-0.5 mr-3 flex-shrink-0" />
                 <span className="text-sm text-gray-300">
-                  Monday - Friday: 6:00 AM - 9:00 PM <br />
-                  Saturday: 4:00 PM - 7:00 PM
+                  Class Timings:<br />
+                  Monday - Friday<br />
+                  Morning: 6:00 AM - 7:00 AM and <br />
+                  Evening: 3:00 PM - 9:00 PM
                 </span>
               </li>
             </ul>

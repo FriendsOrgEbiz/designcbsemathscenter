@@ -11,7 +11,7 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToHash from "./components/utils/ScrollToHash";
 import ResultsPage from "./pages/Reults";
-import GalleryPage from "./pages/galleryPage";
+import GalleryPage from "./pages/GalleryPage";
 
 function App() {
   return (

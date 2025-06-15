@@ -22,14 +22,50 @@ const ContactPage: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+    reset
   } = useForm<ContactFormData>();
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-    // Handle form submission
-    alert('Thank you for your message! We will get back to you soon.');
+  // const onSubmit = (data: ContactFormData) => {
+  //   console.log(data);
+  //   // Handle form submission
+  //   alert('Thank you for your message! We will get back to you soon.');
+  // };
+  // const onSubmit = (data: ContactFormData) => {
+  //   const message = `Hi, I'm ${data.name}%0AEmail: ${data.email}%0APhone: ${data.phone}%0AClass: ${data.studentClass}%0ASubject: ${data.subject}%0AMessage: ${data.message}%0ATrial: ${data.trialClass ? 'Yes' : 'No'}`;
+
+  //   window.open(`https://wa.me/6382505908?text=${message}`, '_blank');
+  // };
+
+  const onSubmit = async (data: ContactFormData) => {
+    const formData = new FormData();
+
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, String(value));
+    });
+
+    // Add formsubmit hidden fields
+    formData.append("_captcha", "false");
+    formData.append("_subject", "New enquiry from Design CBSE Website");
+
+    try {
+      const res = await fetch("https://formsubmit.co/jagadeesanal@gmail.com", {
+        method: "POST",
+        body: formData
+      });
+
+      if (res.ok) {
+        alert("✅ Message sent successfully!");
+        reset(); // Clear form
+      } else {
+        alert("⚠️ Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("⚠️ Failed to send message. Please check your connection.");
+    }
   };
+
 
   return (
     <div className="pt-24 pb-16">
@@ -133,7 +169,17 @@ const ContactPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-900">Send a Message</h3>
               </div>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={handleSubmit(onSubmit)} 
+                // action="https://formsubmit.co/eazibiztestmobile@gmail.com"
+                // method="POST"
+                className="space-y-6">
+                {/* <input type="hidden" name="_captcha" value="false" /> */}
+                {/* <input
+                  type="hidden"
+                  name="_subject"
+                  value="Trial Class Request - Contact Form"
+                /> */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Your Name <span className="text-red-500">*</span>

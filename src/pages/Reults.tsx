@@ -5,6 +5,7 @@ import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import { Calendar, Trophy, Filter } from 'lucide-react';
 import resultsData from '../components/utils/all_results.json';
+import cons from '../components/images/Consolidated_Result_2014_2025.pdf'
 
 interface TopScorer {
   name: string;
@@ -41,6 +42,7 @@ const ResultsPage: React.FC = () => {
   const [grade, setGrade] = useState<string>('all');
   const [subject, setSubject] = useState<string>('all');
   const [exam, setExam] = useState<string>('all');
+  const [showPdf, setShowPdf] = useState(false);
 
   useEffect(() => {
     setData(resultsData);
@@ -77,6 +79,49 @@ const ResultsPage: React.FC = () => {
           subtitle="Filter by academic year, class, subject, or exam"
           center
         />
+
+        {/* <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex justify-end">
+          <div className="flex gap-3">
+            <a
+              href="../components/images/video.mp4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 font-medium px-4 py-2 rounded-md transition"
+            >
+              📄 View Consolidated
+            </a>
+            <a
+              href="../components/images/logo.jpeg"
+              download
+              className="inline-flex items-center bg-primary-600 text-white hover:bg-primary-700 font-medium px-4 py-2 rounded-md transition"
+            >
+              ⬇️ Download PDF
+            </a>
+          </div>
+        </div> */}
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex justify-end">
+          <div className="flex gap-3">
+            <button
+              onClick={() => setShowPdf(!showPdf)}
+              className="inline-flex items-center bg-primary-600 text-white hover:bg-primary-700 font-medium px-4 py-2 rounded-md transition"
+            >
+              {showPdf ? 'Hide' : 'View'} Consolidated Results from 2014 - 2025
+            </button>
+          </div>
+        </div>
+
+        {showPdf && (
+          <div className="w-full h-[80vh] mt-4 rounded-xl bg-white shadow-2xl ring-1 ring-gray-200 p-2 mb-4">
+            <iframe
+              src={cons}
+              className="w-full h-full"
+              frameBorder="10"
+              title="Consolidated Results"
+            ></iframe>
+          </div>
+        )}
+
 
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
           <div className="flex flex-wrap gap-4">

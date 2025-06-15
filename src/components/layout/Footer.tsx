@@ -28,7 +28,9 @@ const Footer: React.FC = () => {
               <a href="#" className="text-white hover:text-primary-200 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white hover:text-primary-200 transition-colors">
+              <a href="https://youtube.com/@designcbsemathscentre4277?feature=shared" className="text-white hover:text-primary-200 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer">
                 <Youtube size={20} />
               </a>
             </div>

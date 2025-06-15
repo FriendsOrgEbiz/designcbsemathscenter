@@ -145,9 +145,11 @@ const ContactPage: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Office Hours</h3>
             <p className="text-gray-600 mb-4">Our center is open:</p>
             <ul className="space-y-2 text-gray-700">
-              <li>Monday - Friday: 6:00 AM - 9:00 PM</li>
+              <li>Monday to Friday</li>
+              <li>Morning: 6:00 AM - 7:00 AM</li>
+              <li>Evening: 3:00 PM - 9:00 PM</li>
               <li>Saturday: 4:00 PM - 7:00 PM</li>
-              <li>Sunday: Closed</li>
+              <li>Sunday: 11:00 AM - 01:00 PM</li>
             </ul>
           </motion.div>
         </div>

@@ -254,7 +254,7 @@ const TimetablePage: React.FC = () => {
                           key={idx}
                           className={
                             line.toLowerCase().includes('students can select the most suitable batch based on their convenience')
-                              ? 'text-red-600 font-bold'
+                              ? 'text-black-600 font-bold'
                               : 'text-gray-700'
                           }
                         >

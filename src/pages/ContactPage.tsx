@@ -172,7 +172,7 @@ const ContactPage: React.FC = () => {
               </div>
 
               <form
-                onSubmit={handleSubmit(onSubmit)} 
+                onSubmit={handleSubmit(onSubmit)}
                 // action="https://formsubmit.co/eazibiztestmobile@gmail.com"
                 // method="POST"
                 className="space-y-6">
@@ -272,6 +272,7 @@ const ContactPage: React.FC = () => {
                     </label>
                     <select
                       id="subject"
+                      multiple
                       className="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                       {...register('subject')}
                     >
@@ -315,7 +316,9 @@ const ContactPage: React.FC = () => {
 
                 <div>
                   <Button type="submit" variant="primary" className="w-full">
-                    <Send size={16} className="mr-2" /> Send Message
+                    <span className="flex items-center justify-center">
+                      <Send size={16} className="mr-2" /> Send Message
+                    </span>
                   </Button>
                 </div>
               </form>
@@ -346,7 +349,7 @@ const ContactPage: React.FC = () => {
       </div>
 
       {/* Book Trial Class CTA */}
-      <div className="bg-primary-800 py-16">
+      {/* <div className="bg-primary-800 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
             <div className="lg:col-span-3">
@@ -368,7 +371,8 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
     </div>
   );
 };

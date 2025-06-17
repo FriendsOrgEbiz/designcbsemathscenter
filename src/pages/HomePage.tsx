@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
       <Features />
       <CourseHighlights />
       <CTASection />
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
     </>
   );
 };

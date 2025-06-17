@@ -4,6 +4,7 @@ import SectionTitle from '../components/common/SectionTitle';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import { Calendar, Clock, CheckCircle, PenTool, BookOpen, FileCheck } from 'lucide-react';
+import teaching3 from '../components/images/teaching_3.jpeg'
 
 const TestBatchesPage: React.FC = () => {
   return (
@@ -70,7 +71,8 @@ const TestBatchesPage: React.FC = () => {
           >
             <div className="absolute -top-6 -right-6 w-48 h-48 bg-primary-200 rounded-full opacity-50 filter blur-3xl"></div>
             <img
-              src="https://images.pexels.com/photos/5905559/pexels-photo-5905559.jpeg"
+              src={teaching3}
+              // "https://images.pexels.com/photos/5905559/pexels-photo-5905559.jpeg"
               alt="Students taking test"
               className="rounded-lg shadow-xl"
             />

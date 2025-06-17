@@ -22,12 +22,12 @@ const Footer: React.FC = () => {
               Premier coaching institute offering quality education in CBSE Mathematics and Science for students from Class 8 to 12.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-primary-200 transition-colors">
+              {/* <a href="#" className="text-white hover:text-primary-200 transition-colors">
                 <Facebook size={20} />
               </a>
               <a href="#" className="text-white hover:text-primary-200 transition-colors">
                 <Instagram size={20} />
-              </a>
+              </a> */}
               <a href="https://youtube.com/@designcbsemathscentre4277?feature=shared" className="text-white hover:text-primary-200 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer">
@@ -68,6 +68,21 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/testimonials" className="text-sm text-gray-300 hover:text-white transition-colors">
                   Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/results" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  Results
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="text-sm text-gray-300 hover:text-white transition-colors">
+                  Gallery
                 </Link>
               </li>
             </ul>
@@ -130,7 +145,6 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <Clock size={18} className="text-primary-300 mt-0.5 mr-3 flex-shrink-0" />
                 <span className="text-sm text-gray-300">
-                  Class Timings:<br />
                   Monday - Friday<br />
                   Morning: 6:00 AM - 7:00 AM and <br />
                   Evening: 3:00 PM - 9:00 PM

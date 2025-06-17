@@ -192,6 +192,7 @@ const AboutPage: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">
                     DESIGN CBSE Maths & Science Centre
+                    (Only For CBSE Syllabus)
                   </h3>
                   <p className="text-gray-600">
                     24, Karthik Nagar, (Near Kendriya Vidyalaya & Swathi Poly Clinic),
@@ -225,7 +226,7 @@ const AboutPage: React.FC = () => {
               {/* Map */}
               <div className="aspect-video w-full rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4517820060585!2d76.99013787380644!3d11.008384954833937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af3faa805f%3A0xb8b3c25e8b0a5eb5!2sSowripalayam%20Main%20Rd%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1717191464000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.32897836298446!2d76.99925402928959!3d11.007633267135226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859d1bf259d8b%3A0x3c6ae5996f89e3e1!2sDesign%20Cbse%20Maths%20Centre!5e1!3m2!1sen!2sin!4v1750128398380!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '../common/Button';
 import { Sparkles, BookOpen, Clock } from 'lucide-react';
 import logo from '../images/logo.jpeg'
+import teaching2 from '../images/teaching_2.jpeg'
 
 const Hero: React.FC = () => {
   return (

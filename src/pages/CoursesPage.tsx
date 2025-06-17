@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SectionTitle from "../components/common/SectionTitle";
 import Card from "../components/common/Card";
 import Button from "../components/common/Button";
+import teachingImage from '../components/images/teaching_1.jpeg'
 import {
   Calculator,
   FlaskRound as Flask,
@@ -86,8 +87,12 @@ const CourseCard: React.FC<CourseCardProps> = ({
           </div>
 
           <Button to="/timetable" className="w-full">
-            View Schedule <ChevronRight size={16} className="ml-1" />
+            <span className="flex items-center justify-center">
+              View Schedule <ChevronRight size={16} className="ml-1" />
+            </span>
           </Button>
+
+
         </div>
       </Card>
     </motion.div>
@@ -302,7 +307,8 @@ const CoursesPage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="https://images.pexels.com/photos/5212331/pexels-photo-5212331.jpeg"
+                src={teachingImage}
+                // "https://images.pexels.com/photos/5212331/pexels-photo-5212331.jpeg"
                 alt="Teaching approach"
                 className="rounded-lg shadow-xl"
               />

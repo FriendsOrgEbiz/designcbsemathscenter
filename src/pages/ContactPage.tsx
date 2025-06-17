@@ -13,7 +13,7 @@ interface ContactFormData {
   email: string;
   phone: string;
   studentClass: string;
-  subject: string;
+  subject: string[];
   message: string;
   trialClass: boolean;
 }
@@ -40,9 +40,17 @@ const ContactPage: React.FC = () => {
   const onSubmit = async (data: ContactFormData) => {
     const formData = new FormData();
 
-    Object.entries(data).forEach(([key, value]) => {
-      formData.append(key, String(value));
-    });
+    // Object.entries(data).forEach(([key, value]) => {
+    //   formData.append(key, String(value));
+    // });
+
+    formData.append('Student Name', data.name);
+    formData.append('Email Address', data.email);
+    formData.append('Phone Number', data.phone);
+    formData.append('Student Class', data.studentClass);
+    formData.append('Subjects Interested', Array.isArray(data.subject) ? data.subject.join(', ') : data.subject);
+    formData.append('Trial Class Booking', data.trialClass ? 'Yes' : 'No');
+    formData.append('Message', data.message);
 
     // Add formsubmit hidden fields
     formData.append("_captcha", "false");
@@ -143,7 +151,7 @@ const ContactPage: React.FC = () => {
               <Clock size={24} className="text-primary-600" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">Office Hours</h3>
-            <p className="text-gray-600 mb-4">Our center is open:</p>
+            <p className="text-gray-600 mb-4">Our centre is open:</p>
             <ul className="space-y-2 text-gray-700">
               <li>Monday to Friday</li>
               <li>Morning: 6:00 AM - 7:00 AM</li>
@@ -189,7 +197,7 @@ const ContactPage: React.FC = () => {
                   <input
                     type="text"
                     id="name"
-                    className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.name ? 'border-red-500' : 'border-gray-300'
+                    className={`w-full rounded-md border border-gray-400 bg-white text-gray-800 shadow-sm placeholder:text-gray-500 focus:border-primary-600 focus:ring-2 focus:ring-primary-500 p-1 ${errors.name ? 'border-red-500' : 'border-gray-300'
                       }`}
                     placeholder="John Doe"
                     {...register('name', { required: 'Name is required' })}
@@ -207,7 +215,7 @@ const ContactPage: React.FC = () => {
                     <input
                       type="email"
                       id="email"
-                      className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.email ? 'border-red-500' : 'border-gray-300'
+                      className={`w-full rounded-md border border-gray-400 bg-white text-gray-800 shadow-sm placeholder:text-gray-500 focus:border-primary-600 focus:ring-2 focus:ring-primary-500 p-1 ${errors.email ? 'border-red-500' : 'border-gray-300'
                         }`}
                       placeholder="john@example.com"
                       {...register('email', {
@@ -230,7 +238,7 @@ const ContactPage: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
-                      className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.phone ? 'border-red-500' : 'border-gray-300'
+                      className={`w-full rounded-md border border-gray-400 bg-white text-gray-800 shadow-sm placeholder:text-gray-500 focus:border-primary-600 focus:ring-2 focus:ring-primary-500 p-1 ${errors.phone ? 'border-red-500' : 'border-gray-300'
                         }`}
                       placeholder="+91 98765 43210"
                       {...register('phone', {
@@ -254,7 +262,7 @@ const ContactPage: React.FC = () => {
                     </label>
                     <select
                       id="studentClass"
-                      className="w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                      className={`w-full rounded-md border border-gray-400 bg-white text-gray-800 shadow-sm placeholder:text-gray-500 focus:border-primary-600 focus:ring-2 focus:ring-primary-500 p-1`}
                       {...register('studentClass')}
                     >
                       <option value="">Select Class</option>
@@ -266,7 +274,7 @@ const ContactPage: React.FC = () => {
                     </select>
                   </div>
 
-                  <div>
+                  {/* <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                       Subject of Interest
                     </label>
@@ -282,7 +290,34 @@ const ContactPage: React.FC = () => {
                       <option value="Physics">Physics (Class 11-12)</option>
                       <option value="Chemistry">Chemistry (Class 11-12)</option>
                     </select>
+                  </div> */}
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Subject of Interest
+                    </label>
+
+                    <div className="grid grid-cols-1 gap-3">
+                      {[
+                        'Mathematics',
+                        'Science (Class 9-10)',
+                        'Physics (Class 11-12)',
+                        'Chemistry (Class 11-12)'
+                      ].map((subject) => (
+                        <label key={subject} className="flex items-center space-x-2">
+                          <input
+                            type="checkbox"
+                            value={subject}
+                            {...register('subject')}
+                            className="h-4 w-4 text-primary-600 border-gray-300 rounded"
+                          />
+                          <span className="text-sm text-gray-700">{subject}</span>
+                        </label>
+                      ))}
+                    </div>
                   </div>
+
+
                 </div>
 
                 <div>
@@ -292,7 +327,7 @@ const ContactPage: React.FC = () => {
                   <textarea
                     id="message"
                     rows={4}
-                    className={`w-full rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 ${errors.message ? 'border-red-500' : 'border-gray-300'
+                    className={`w-full rounded-md border border-gray-400 bg-white text-gray-800 shadow-sm placeholder:text-gray-500 focus:border-primary-600 focus:ring-2 focus:ring-primary-500 p-2 ${errors.message ? 'border-red-500' : 'border-gray-300'
                       }`}
                     placeholder="How can we help you?"
                     {...register('message', { required: 'Message is required' })}
@@ -333,14 +368,14 @@ const ContactPage: React.FC = () => {
             >
               <div className="h-80 lg:h-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4517820060585!2d76.99013787380644!3d11.008384954833937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af3faa805f%3A0xb8b3c25e8b0a5eb5!2sSowripalayam%20Main%20Rd%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1717191464000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.32897836298446!2d76.99925402928959!3d11.007633267135226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859d1bf259d8b%3A0x3c6ae5996f89e3e1!2sDesign%20Cbse%20Maths%20Centre!5e1!3m2!1sen!2sin!4v1750128398380!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="DESIGN CBSE Centre location"
+                  title="DESIGN CBSE Maths & Science Centre location"
                 ></iframe>
               </div>
             </motion.div>

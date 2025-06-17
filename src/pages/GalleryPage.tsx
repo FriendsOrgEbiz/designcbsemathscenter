@@ -1,41 +1,47 @@
 import React, { useState } from 'react';
 import SectionTitle from '../components/common/SectionTitle';
-import image from '../components/images/logo.jpeg'
+import Gallery_Image_1 from '../components/images/Gallery_Image_1.jpeg'
+import Gallery_Image_2 from '../components/images/Gallery_Image_2.jpeg'
+import Gallery_Image_3 from '../components/images/Gallery_Image_3.jpeg'
+import Gallery_Image_4 from '../components/images/Gallery_Image_4.jpeg'
+import Gallery_Image_5 from '../components/images/Gallery_Image_5.jpeg'
+import Gallery_Image_6 from '../components/images/Gallery_Image_6.jpeg'
+import Gallery_Image_7 from '../components/images/Gallery_Image_7.jpeg'
+
 import video from '../components/images/video.mp4'
 import { motion } from 'framer-motion';
 
-const images = [
-    {
-        src: image,
-        alt: 'Classroom 1',
-        category: 'Classrooms'
-    },
-    {
-        src: image,
-        alt: 'Annual Event',
-        category: 'Events'
-    },
-    {
-        src: image,
-        alt: 'Toppers Wall',
-        category: 'Achievements'
-    },
-    {
-        src: image,
-        alt: 'Interactive Session',
-        category: 'Classrooms'
-    }
-];
+// const images = [
+//     {
+//         src: Gallery_Image_1,
+//         alt: 'Classroom 1',
+//         category: 'Classrooms'
+//     },
+//     {
+//         src: Gallery_Image_2,
+//         alt: 'Annual Event',
+//         category: 'Events'
+//     },
+//     {
+//         src: image,
+//         alt: 'Toppers Wall',
+//         category: 'Achievements'
+//     },
+//     {
+//         src: image,
+//         alt: 'Interactive Session',
+//         category: 'Classrooms'
+//     }
+// ];
 
 const media = [
-    { type: 'image', src: image, title: 'Classroom 1' },
-    { type: 'video', src: video, title: 'Intro Session' },
-    { type: 'image', src: image, title: 'Toppers Wall' },
-    { type: 'video', src: video, title: 'Annual Event' },
-    { type: 'image', src: image, title: 'Classroom 1' },
-    { type: 'video', src: video, title: 'Intro Session' },
-    { type: 'image', src: image, title: 'Toppers Wall' },
-    { type: 'video', src: video, title: 'Annual Event' }
+    { type: 'image', src: Gallery_Image_1, title: 'Our Centre' },
+    { type: 'image', src: Gallery_Image_2, title: 'Intro Session' },
+    { type: 'image', src: Gallery_Image_3, title: 'Focused Learning Session' },
+    { type: 'image', src: Gallery_Image_5, title: 'Maths Lecture' },
+    { type: 'image', src: Gallery_Image_4, title: 'Exterior View – Main Road' },
+    // { type: 'image', src: Gallery_Image_6, title: 'Intro Session' },
+    // { type: 'image', src: Gallery_Image_7, title: 'Toppers Wall' },
 ];
 
 const GalleryPage: React.FC = () => {

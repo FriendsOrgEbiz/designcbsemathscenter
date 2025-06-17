@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
                   Teaching Methodology
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/testimonials" className="text-sm text-gray-300 hover:text-white transition-colors">
                   Testimonials
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/contact" className="text-sm text-gray-300 hover:text-white transition-colors">
                   Contact

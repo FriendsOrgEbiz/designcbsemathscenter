@@ -7,6 +7,7 @@ import Gallery_Image_4 from '../components/images/Gallery_Image_4.jpeg'
 import Gallery_Image_5 from '../components/images/Gallery_Image_5.jpeg'
 import Gallery_Image_6 from '../components/images/Gallery_Image_6.jpeg'
 import Gallery_Image_7 from '../components/images/Gallery_Image_7.jpeg'
+import Gallery_Video_1 from '../components/images/Gallery_Video_1.mp4'
 
 import video from '../components/images/video.mp4'
 import { motion } from 'framer-motion';
@@ -40,7 +41,7 @@ const media = [
     { type: 'image', src: Gallery_Image_3, title: 'Focused Learning Session' },
     { type: 'image', src: Gallery_Image_5, title: 'Maths Lecture' },
     { type: 'image', src: Gallery_Image_4, title: 'Exterior View – Main Road' },
-    // { type: 'image', src: Gallery_Image_6, title: 'Intro Session' },
+    { type: 'video', src: Gallery_Video_1, title: 'Teaching Session' },
     // { type: 'image', src: Gallery_Image_7, title: 'Toppers Wall' },
 ];
 

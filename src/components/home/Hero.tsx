@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Button from '../common/Button';
 import { Sparkles, BookOpen, Clock } from 'lucide-react';
 import logo from '../images/logo.jpeg'
-import teaching2 from '../images/teaching_2.jpeg'
+import teaching2 from '../images/Home_Img.jpeg'
 
 const Hero: React.FC = () => {
   return (
@@ -82,7 +82,8 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="absolute -top-8 -left-8 w-64 h-64 bg-accent-400 rounded-full opacity-20 filter blur-3xl"></div>
               <img
-                src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg"
+                src={teaching2}
+                // "https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg"
                 alt="Students in classroom"
                 className="rounded-lg shadow-2xl w-full object-cover"
                 style={{ maxHeight: '500px' }}

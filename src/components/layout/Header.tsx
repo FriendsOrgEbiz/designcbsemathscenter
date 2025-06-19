@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ isScrolled }) => {
     { name: 'Class Timings', path: '/timetable' },
     { name: 'Test Batches', path: '/test-batches' },
     { name: 'Methodology', path: '/methodology' },
-    // { name: 'Testimonials', path: '/testimonials' },
+    { name: 'Testimonials', path: '/testimonials' }, 
     { name: 'Contact', path: '/contact' },
     { name: 'Results', path: '/results' },
     { name: 'Gallery', path: '/gallery' },

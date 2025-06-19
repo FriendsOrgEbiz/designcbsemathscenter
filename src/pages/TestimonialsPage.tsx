@@ -40,11 +40,31 @@ const TestimonialsPage: React.FC = () => {
     console.log("Selected rating:", star);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    // e.preventDefault();
-    console.log("Form submitted:", formData);
-    // You can send formData to your backend here
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   // e.preventDefault();
+  //   console.log("Form submitted:", formData);
+  //   // You can send formData to your backend here
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(formData)
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzhS55p-XOpwpf2c4LW7J9OVa8NNHygW06XzXY7HPukcU_GUle9aDO9qWBBA88DjisPJQ/exec', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    const result = await response.json();
+    if (result.success) {
+      alert('Thank you! Your testimonial has been submitted.');
+    } else {
+      alert('Submission failed. Please try again later.');
+    }
   };
+  
 
   const testimonials: Testimonial[] = [
     {

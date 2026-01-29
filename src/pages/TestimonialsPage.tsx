@@ -46,22 +46,48 @@ const TestimonialsPage: React.FC = () => {
   //   // You can send formData to your backend here
   // };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log(formData)
+  //   const response = await fetch('https://script.google.com/macros/s/AKfycbwU9zr7NyYrU6Ivw2_9B5dKxZrPF0_ZOmwmFo2H4LUGGfyBPXzfl-1WmNeWjbl1BBOncw/exec', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(formData),
+  //   });
+  
+  //   const result = await response.json();
+  //   if (result.success) {
+  //     alert('Thank you! Your testimonial has been submitted.');
+  //   } else {
+  //     alert('Submission failed. Please try again later.');
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData)
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzhS55p-XOpwpf2c4LW7J9OVa8NNHygW06XzXY7HPukcU_GUle9aDO9qWBBA88DjisPJQ/exec', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData),
-    });
   
-    const result = await response.json();
-    if (result.success) {
-      alert('Thank you! Your testimonial has been submitted.');
-    } else {
-      alert('Submission failed. Please try again later.');
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("class", formData.class);
+    form.append("subject", formData.subject);
+    form.append("rating", String(formData.rating));
+    form.append("testimonial", formData.testimonial);
+  
+    try {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbwU9zr7NyYrU6Ivw2_9B5dKxZrPF0_ZOmwmFo2H4LUGGfyBPXzfl-1WmNeWjbl1BBOncw/exec", {
+        method: "POST",
+        body: form,
+      });
+  
+      const text = await res.text();
+      console.log("Response from script:", text);
+      alert("Testimonial submitted successfully!");
+    } catch (err) {
+      console.error("Submission error:", err);
+      alert("There was an error submitting your testimonial.");
     }
   };
   
@@ -318,7 +344,7 @@ const TestimonialsPage: React.FC = () => {
             <form
               className="space-y-6"
               onSubmit={(e) => {
-                e.preventDefault();
+                // e.preventDefault();
                 handleSubmit(e);
               }}
             >
